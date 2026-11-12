@@ -1,0 +1,272 @@
+
+/* =================================
+   QUIZ APP - MAIN STYLING
+================================= */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* Main quiz container */
+.quiz-container {
+    background: white;
+    width: 100%;
+    max-width: 550px;
+
+    padding: 35px;
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Screen styling */
+.screen {
+    width: 100%;
+}
+
+/* Hide inactive screens */
+.hidden {
+    display: none !important;
+}
+
+/* Headings */
+h1 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #333;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 25px 0;
+}
+
+/* Paragraphs */
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* General button styling */
+button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+
+    padding: 14px 20px;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+/* Start button */
+#start-btn {
+    background: #667eea;
+    color: white;
+
+    width: 100%;
+    margin-top: 15px;
+}
+
+#start-btn:hover {
+    background: #5267d5;
+    transform: translateY(-2px);
+}
+
+/* Quiz header */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.quiz-header h2 {
+    margin: 0;
+}
+
+#question-counter {
+    font-size: 14px;
+    color: #667eea;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Progress bar container */
+.progress-container {
+    width: 100%;
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+/* Progress bar */
+#progress-bar {
+    width: 0%;
+    height: 100%;
+
+    background: #667eea;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+/* Answer buttons container */
+.answer-buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+/* Individual answer buttons */
+.answer-btn {
+    width: 100%;
+
+    background: #f1f3f9;
+    color: #333;
+
+    text-align: left;
+
+    border: 2px solid transparent;
+}
+
+/* Answer hover effect */
+.answer-btn:hover:not(:disabled) {
+    background: #e0e7ff;
+    border-color: #667eea;
+}
+
+/* Correct answer */
+.answer-btn.correct {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #10b981;
+}
+
+/* Incorrect answer */
+.answer-btn.wrong {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #ef4444;
+}
+
+/* Disabled answer buttons */
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+/* Next question button */
+#next-btn {
+    background: #667eea;
+    color: white;
+
+    width: 100%;
+    margin-top: 25px;
+}
+
+#next-btn:hover {
+    background: #5267d5;
+}
+
+/* Result screen */
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h2 {
+    font-size: 40px;
+    color: #667eea;
+    margin: 20px 0;
+}
+
+/* Restart button */
+#restart-btn {
+    background: #10b981;
+    color: white;
+
+    width: 100%;
+    margin-top: 15px;
+}
+
+#restart-btn:hover {
+    background: #059669;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .quiz-container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .quiz-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+}
